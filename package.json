@@ -4,11 +4,14 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "packager": "electron-packager ./ message --platform=win32 --arch=x64 --out ./OutApp --overwrite --icon=./icon.ico"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^2.0.4"
+    "electron": "^2.0.4",
+    "electron-packager": "^12.1.0",
+    "electron-prebuilt": "^1.4.13"
   }
 }
