@@ -1,19 +1,20 @@
 /**
  *Created by wq on 2018/7/10
  */
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow} = require('electron'),
+    path = require('path');
 
 let win;
 
 function createWindow() {
     //创建浏览器窗口
     win = new BrowserWindow({
-        width: 800,
+        width: 1000,
         height: 600
     });
 
     //然后加载应用的index.html
-    win.loadFile('index.html');
+    win.loadURL(path.join('file://', __dirname, '/index.html'));
 
     //打开开发者工具
     // win.webContents.openDevTools();
